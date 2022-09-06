@@ -132,3 +132,7 @@ dmypy.json
 .idea
 
 !nginx/dist
+
+nginx/dist/ssl/nginx.key
+nginx/dist/ssl/nginx.crt
+nginx/dist/ssl/dhparam4096.pem
