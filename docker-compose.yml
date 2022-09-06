@@ -11,6 +11,6 @@ services:
     build: ./app/
     name: app-f2ban-web
     read_only: true
-    ports:
-      - 8000:80
+    volumes:
+        - /var/lib/fail2ban/fail2ban.sqlite3:/var/lib/fail2ban/fail2ban.sqlite3
 
