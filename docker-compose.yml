@@ -2,14 +2,14 @@ version: '3'
 services:
   nginx-f2ban-web:
     build: ./nginx/
-    name: nginx-f2ban-web
+    image: nginx-f2ban-web
     read_only: true
     ports:
       - 8000:80
 
   app-f2ban-web:
     build: ./app/
-    name: app-f2ban-web
+    image: app-f2ban-web
     read_only: true
     volumes:
         - /var/lib/fail2ban/fail2ban.sqlite3:/var/lib/fail2ban/fail2ban.sqlite3
