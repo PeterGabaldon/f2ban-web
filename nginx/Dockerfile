@@ -1,8 +1,9 @@
-FROM nginx:latest
+FROM nginx:stable-alpine
 
 COPY dist/ /root/dist/
 
-RUN chown root:www-data -R /usr/share/nginx/html && \
+RUN apk -U --no-cache add nginx-mod-http-headers-more && \
+    chown root:www-data -R /usr/share/nginx/html && \
     chmod 755 -R /usr/share/nginx/html && \
     rm -rf /etc/nginx/conf.d/* /usr/share/nginx/html/* && \
     mkdir -p /etc/nginx/conf.d && \
