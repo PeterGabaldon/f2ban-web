@@ -136,3 +136,5 @@ dmypy.json
 nginx/dist/conf/ssl/nginx.key
 nginx/dist/conf/ssl/nginx.crt
 nginx/dist/conf/ssl/dhparam4096.pem
+
+nginx/**/data/**
