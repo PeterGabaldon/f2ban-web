@@ -17,7 +17,7 @@ services:
     ports:
       - 8000:80
     volumes:
-     - ./data/nginx/log/:/var/log/nginx/
+      - ./data/nginx/log/:/var/log/nginx/
 
 
   app-f2ban-web:
@@ -26,6 +26,9 @@ services:
     container_name: app-f2ban-web
     read_only: true
     restart: always
+    # For debug only, it should be commented later
+    ports:
+      - 127.0.0.1:5000:5000
     volumes:
         - /var/lib/fail2ban/fail2ban.sqlite3:/var/lib/fail2ban/fail2ban.sqlite3
 
