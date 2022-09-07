@@ -37,7 +37,7 @@ def show_bans():
     all_bans = []
 
     for ban in query_db("select ip,jail from bips"):
-        all_bans.append((ban[0], ban[0]))
+        all_bans.append((ban[0], ban[1]))
 
     return render_template("show_bans.html", all_bans=all_bans)
 
