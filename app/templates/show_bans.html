@@ -27,7 +27,8 @@
 							<p><strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum.</p>
 							<ul class="feature-icons">
                                 {% for ban in all_bans %}
-                                <li><a href="https://ipinfo.io/{{ ban[0] }}">{{ ban[0] }} (Jail: {{ ban[2] }})</a></li>
+				<p>{{ ban }}</p>				
+                                <li><a href="https://ipinfo.io/{{ ban[0] }}">{{ ban[0] }} (Jail: {{ ban[1] }})</a></li>
                                 {% endfor %}
 							</ul>
 							<p>Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
