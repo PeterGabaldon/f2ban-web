@@ -26,8 +26,7 @@
 						<div class="content">
 							<p><strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum.</p>
 							<ul class="feature-icons">
-                                {% for ban in all_bans %}
-				<p>{{ ban }}</p>				
+                                {% for ban in all_bans %}			
                                 <li><a href="https://ipinfo.io/{{ ban[0] }}">{{ ban[0] }} (Jail: {{ ban[1] }})</a></li>
                                 {% endfor %}
 							</ul>
