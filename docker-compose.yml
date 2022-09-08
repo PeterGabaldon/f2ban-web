@@ -14,7 +14,7 @@ services:
      - /run
      - /var/lib/nginx/tmp:uid=100,gid=82
     ports:
-      - 8000:80
+    #  - 8000:80
       - 8443:443
     volumes:
       - ./data/nginx/log/:/var/log/nginx/
