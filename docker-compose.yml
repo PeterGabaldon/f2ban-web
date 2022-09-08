@@ -5,6 +5,14 @@ services:
     container_name: nginx-f2ban-web
     read_only: true
     restart: always
+    tmpfs:
+     - /var/tmp/nginx/client_body
+     - /var/tmp/nginx/proxy
+     - /var/tmp/nginx/fastcgi
+     - /var/tmp/nginx/uwsgi
+     - /var/tmp/nginx/scgi
+     - /run
+     - /var/lib/nginx/tmp:uid=100,gid=82
     ports:
     #  - 8000:80
       - 8443:443
