@@ -28,5 +28,5 @@ services:
     #ports:
     #  - 127.0.0.1:5000:5000
     volumes:
-        - /var/lib/fail2ban/fail2ban.sqlite3:/var/lib/fail2ban/fail2ban.sqlite3
+        - /var/lib/fail2ban/fail2ban.sqlite3:/var/lib/fail2ban/fail2ban.sqlite3:ro
 
